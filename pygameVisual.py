@@ -1,6 +1,7 @@
 # import the pygame module
 import pygame
 import math
+import serial
 
 # import pygame.locals for easier
 # access to key coordinates
@@ -18,7 +19,7 @@ def setCircle(colorr,colorg,colorb,x,y,radius,border_width):
     
     pygame.draw.circle(screen, (colorr, colorg, colorb), (x, y), radius, border_width)
 
-bg = pygame.image.load("images/paper.png")
+bg = pygame.image.load("images/blue.png")
 
 # Variable to keep our game loop running
 gameOn = True
@@ -37,6 +38,7 @@ setCircle(0, 255, 49, 400, 400, 400 ,2 )
 # Our game loop
 while gameOn:
     # for loop through the event queue
+    
     for event in pygame.event.get():
         
         # Check for KEYDOWN event
