@@ -42,11 +42,11 @@ let d = 0
 strip = neopixel.create(DigitalPin.P1, 30, NeoPixelMode.RGB)
 let rot, gruen, blau
 let delay = 100
-function lerp(a: any, b: any, c: any) {
+function lerp(a, b, c) {
     return a * (c - b) + b
 }
 
-function lerp3(a: any, b: any, c: any, d: any) {
+function lerp3(a , b , c, d) {
     if (a < 0.5) {
         return lerp(2 * a, b, c)
     } else {
